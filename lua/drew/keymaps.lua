@@ -11,6 +11,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<S-j>", "<ESC>", opts)
 vim.keymap.set("n", "<C-w>", "<ESC>", opts)
 
+-- disable everything related to q because it is terrible
+vim.keymap.set("n", "q", "<NOP>", opts)
+
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
