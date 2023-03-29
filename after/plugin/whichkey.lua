@@ -87,8 +87,8 @@ local mappings = {
     d = {
       name = "Diagnostics",
       d = {"<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics"},
-      j = {"<cmd>lua vim.lsp.buf.goto_next()<cr>", "Next Diagnostic"},
-      k = {"<cmd>lua vim.lsp.buf.goto_prev()<cr>", "Prev Diagnostic"},
+      j = {"<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR})<cr>", "Goto Next Error"},
+      k = {"<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR})<cr>", "Goto Previous Error"},
       q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
     },
 

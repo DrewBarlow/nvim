@@ -65,6 +65,7 @@ lsp.set_preferences({
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = true
+  virtual_text = false
 })
 
+vim.keymap.set("n", "<S-j>", vim.diagnostic.open_float, {silent = true})
