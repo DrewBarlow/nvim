@@ -24,7 +24,10 @@ cmp.setup({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close()
 		}),
-		["<Tab>"] = cmp.mapping.confirm({select = true})
+		["<Tab>"] = cmp.mapping.confirm({
+      select = true,
+      behavior = cmp.ConfirmBehavior.Replace
+    })
 	}),
 
 	formatting = {
@@ -43,6 +46,7 @@ cmp.setup({
 	},
 
 	sources = {
+    {name = "copilot"},
 		{name = "nvim_lsp"},
 		{name = "nvim_lua"},
 		{name = "luasnip"},

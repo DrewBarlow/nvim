@@ -31,7 +31,7 @@ lsp.configure("rust_analyzer", {
 })
 
 local cmp = require("cmp")
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = {behavior = cmp.SelectBehavior.Replace}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-k>"] = cmp.mapping.select_prev_item(),
   ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -42,14 +42,25 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     i = cmp.mapping.abort(),
     c = cmp.mapping.close()
   }),
-  ["<Tab>"] = cmp.mapping.confirm({select = true})
+  ["<Tab>"] = cmp.mapping.confirm({
+    select = true,
+    behavior = cmp.ConfirmBehavior.Replace
+  })
 })
 
 cmp_mappings["<Tab>"] = nil
 cmp_mappings["<S-Tab>"] = nil
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+  mapping = cmp_mappings,
+  sources = {
+    {name = "copilot"},
+		{name = "nvim_lsp"},
+		{name = "nvim_lua"},
+		{name = "luasnip"},
+		{name = "buffer"},
+		{name = "path"}
+	},
 })
 
 lsp.set_preferences({

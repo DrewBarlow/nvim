@@ -57,6 +57,10 @@ return require("packer").startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
 
+      -- copilot
+      {"zbirenbaum/copilot.lua"},
+      {"zbirenbaum/copilot-cmp"},
+
 		  -- code snippets 
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
@@ -64,24 +68,25 @@ return require("packer").startup(function(use)
 	  }
   }
 
-  -- Telescope
+  -- telescope
   use {"nvim-telescope/telescope.nvim"}
   use {"nvim-telescope/telescope-file-browser.nvim"}
 
-  -- Treesitter
+  -- treesitter
   use {"nvim-treesitter/nvim-treesitter", commit="8e763332b7bf7b3a426fd8707b7f5aa85823a5ac"}
   use {"nvim-treesitter/playground"}
   use {"nvim-treesitter/nvim-treesitter-context"}
 
-  -- Git
+  -- git
   use {"lewis6991/gitsigns.nvim"}
   use {"ThePrimeagen/git-worktree.nvim"}
 
-  -- WhichKey
+  -- whichKey
   use {"folke/which-key.nvim"}
 
   -- undo tree
   use {"mbbill/undotree"}
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

@@ -124,6 +124,7 @@ local mappings = {
 
   m = {
     name = "Misc.",
+    c = {"<cmd>Copilot panel<cr>", "Copilot"},
     u = {"<cmd>UndotreeToggle<cr>", "Undo Tree"},
     r = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace Hovering"},
     R = {"<cmd>so<cr>", "Reload Vim"},
