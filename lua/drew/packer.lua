@@ -35,6 +35,7 @@ return require("packer").startup(function(use)
   use {"akinsho/toggleterm.nvim"}
   use {"lewis6991/impatient.nvim"}
   use {"lukas-reineke/indent-blankline.nvim"}
+  use {"folke/todo-comments.nvim"}
 
   -- theme
   use {"Tsuzat/NeoSolarized.nvim"}

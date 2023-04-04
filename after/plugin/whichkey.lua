@@ -89,7 +89,7 @@ local mappings = {
       d = {"<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics"},
       j = {"<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR})<cr>", "Goto Next Error"},
       k = {"<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR})<cr>", "Goto Previous Error"},
-      q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+      q = {"<cmd>TodoTelescope<cr>", "Quickfix"}
     },
 
     s = {
@@ -97,11 +97,11 @@ local mappings = {
       s = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Signature Help"},
       r = {"<cmd>Telescope lsp_references<cr>", "Show References"},
       t = {"<cmd>Telescope lsp_type_definitions<cr>", "Type Definitions"},
-      d = {"<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition"},
+      d = {"<cmd>lua vim.lsp.buf.definition()<cr>", "Go To Definition"}
     },
 
     f = {"<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format"},
-    l = {"<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action"},
+    l = {"<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action"}
   },
 
   s = {
@@ -128,7 +128,7 @@ local mappings = {
     u = {"<cmd>UndotreeToggle<cr>", "Undo Tree"},
     r = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace Hovering"},
     R = {"<cmd>so<cr>", "Reload Vim"},
-    a = {"<cmd>TSPlaygroundToggle<cr>", "Show AST"}
+    a = {"<cmd>TSPlaygroundToggle<cr>", "Show AST"},
   }
 }
 
