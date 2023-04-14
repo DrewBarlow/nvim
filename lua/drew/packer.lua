@@ -28,7 +28,6 @@ return require("packer").startup(function(use)
 
   -- ui
   use {"kyazdani42/nvim-web-devicons"}
-  use {"kyazdani42/nvim-tree.lua"}
   use {"akinsho/bufferline.nvim"}
   use {"moll/vim-bbye"}
   use {"nvim-lualine/lualine.nvim"}
@@ -38,7 +37,7 @@ return require("packer").startup(function(use)
   use {"folke/todo-comments.nvim"}
 
   -- theme
-  use {"Tsuzat/NeoSolarized.nvim"}
+  use {"catppuccin/nvim", as = "catppuccin"}
 
   -- cmp and lsp
   use {

@@ -107,7 +107,7 @@ local mappings = {
   s = {
     name = "Search",
     k = {"<cmd>Telescope keymaps<cr>", "Keymaps"},
-    t = {"<cmd>Telescope live_grep theme=ivy<cr>", "Live Grep"},
+    g = {"<cmd>Telescope live_grep theme=ivy<cr>", "Live Grep"},
     b = {"<cmd>lua require('telescope.builtin').buffers({})<cr>", "Show Buffers"},
     f = {
       "<cmd>lua require('telescope').extensions.file_browser.file_browser({respect_gitignore=false, hidden=true, grouped=true, initial_mode='insert'})<cr>",

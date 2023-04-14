@@ -13,20 +13,21 @@ local diagnostics = {
   sources = {"nvim_diagnostic"},
   sections = {"error", "warn"},
   symbols = {error = "E ", warn = " W "},
-  colored = false,
-  always_visible = true
+  colored = true,
+  always_visible = true,
 }
 
 local diff = {
   "diff",
-  colored = false,
   symbols = {added = "+", modified = "*", removed = "-"},
-  cond = hide_in_width
+  cond = hide_in_width,
+  colored = true,
+  always_visible = true
 }
 
 local filetype = {
   "filetype",
-  icons_enabled = false
+  icons_enabled = true
 }
 
 local location = {
@@ -43,7 +44,7 @@ require("lualine").setup {
     globalstatus = true,
     icons_enabled = true,
     theme = "auto",
-    component_separators = {left = "", right = ""},
+    component_separators = {left = "", right = "|"},
     section_separators = {left = "", right = ""},
     disabled_filetypes = {"alpha", "dashboard"},
     always_divide_middle = true

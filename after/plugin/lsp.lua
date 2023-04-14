@@ -24,7 +24,8 @@ lsp.configure("rust_analyzer", {
       procMacro = {
         ignored = {
           ["async-trait"] = {"async_trait"},
-          ["async-recursion"] = {"async_recursion"}
+          ["async-recursion"] = {"async_recursion"},
+          ["futures"] = {"select_internal"}
         }
       }
   }

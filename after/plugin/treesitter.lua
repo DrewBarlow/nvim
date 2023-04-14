@@ -14,7 +14,9 @@ configs.setup({
     "css",
     "rust",
     "toml",
-    "yaml"
+    "yaml",
+    "c",
+    "cpp"
   },
 
   -- highlight = {enable = true},
